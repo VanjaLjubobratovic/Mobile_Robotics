@@ -23,5 +23,10 @@ def generate_launch_description():
             executable='trackme',
             name='trackme',
             output='screen'
+        ),
+        Node(
+            package='zad32',
+            executable='robotSpinner',
+            name='robotSpinner'
         )
     ])
