@@ -1,0 +1,35 @@
+<launch>
+  <arg name="model" default="burger"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    <arg name="extra_gazebo_args" value="/robot/cmd_vel:=/mobrob/cmd_vel" />
+  </include>
+
+  <param name="ball_description" command="$(find xacro)/xacro --inorder urdf/ball.urdf"/>
+  <node name="spawn_urdf_ball" pkg="gazebo_ros" type="spawn_model" args="-urdf -model simple_ball -x 5 -y 0 -z 0 -param ball_description" />
+
+  <param name="world_description" command="$(find xacro)/xacro --inorder urdf/stage.sdf"/>
+  <node name="spawn_sdf_stage" pkg="gazebo_ros" type="spawn_model" args="-sdf -model stage -x 0 -y 0 -z 0 -param world_description" />
+
+  <group ns = "robot">
+    <param name="robot_description" command="$(find xacro)/xacro urdf/turtlebot3_burger_camera_only.urdf.xacro color:=Gazebo/Blue"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+      <param name="robot_description" value="robot_description" />
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="robot" />
+    </node>
+
+    <node name="spawn_urdf_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -model robot -x 0 -y 0 -z 0 -param robot_description" />
+
+    <node name="static_transform_pub" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /odom /robot/odom 10" />
+  </group>
+</launch>

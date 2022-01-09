@@ -41,9 +41,9 @@ def blob_detect(image,                  #-- The frame (cv standard)
     params = cv2.SimpleBlobDetector_Params()
 
     # Filter by Area.
-    params.filterByArea = True
+    params.filterByArea = False
     params.minArea = 1
-    params.maxArea = 30000
+    params.maxArea = 60000
     
     params.filterByColor = True
     params.blobColor = 255
