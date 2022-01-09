@@ -12,5 +12,10 @@ def generate_launch_description():
             executable='mobrob_minigame',
             name='mobrob_minigame',
             output='screen'
+        ),
+        Node(
+            package='zad33',
+            executable='seekAndDestroy',
+            name='seekAndDestroy'
         )
     ])

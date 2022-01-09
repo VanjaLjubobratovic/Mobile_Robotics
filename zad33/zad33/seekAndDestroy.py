@@ -127,7 +127,7 @@ class SeekAndDestroy(Node):
         else:
             message.linear.x = 0.5
 
-        self.get_logger().info(f'Ball X: {self.blob_point.x}')
+        #self.get_logger().info(f'Ball X: {self.blob_point.x}')
         self.twistPublisher.publish(message)
 
         self.blob_point.x=0.0
