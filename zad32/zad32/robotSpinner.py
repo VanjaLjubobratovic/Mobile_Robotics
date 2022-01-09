@@ -2,20 +2,10 @@ from typing import Set
 
 from numpy.core.defchararray import upper
 import rclpy
-import math
 from rclpy.node import Node
 from rclpy.utilities import get_available_rmw_implementations
-from tf2_ros import TransformException
-from tf2_ros.buffer import Buffer
-from tf2_ros.transform_listener import TransformListener
-from geometry_msgs.msg import Twist, Point, PoseStamped
-from nav_msgs.msg import Odometry
-from gazebo_msgs.srv import SpawnModel, GetWorldProperties
+from geometry_msgs.msg import Twist, Point
 from ament_index_python.packages import get_package_share_directory
-from visualization_msgs.msg import Marker
-from std_srvs.srv import Empty
-import sys
-import numpy as np
 
 import cv2
 from cv_bridge import CvBridge
@@ -81,16 +71,6 @@ class Robot_Spinner(Node):
     def set_blob_params(self, blob_params):
         self._blob_params = blob_params
     
-    # def get_blob_relative_position(self, image, keyPoint):
-    #     cols = float(image.shape[0])
-    #     rows = float(image.shape[1])
-
-    #     center_x = 0.5*cols
-    #     center_y = 0.5*rows
-
-    #     x = (keyPoint.pt[0] - center_x) / (center_x)
-    #     y = (keyPoint.pt[1] - center_y) / (center_y)
-    #     return (x,y)
 
     def read_camera(self, msg):
         #--- image is 320x240
@@ -104,10 +84,8 @@ class Robot_Spinner(Node):
         b_max = int(self.get_parameter('b_max').value)
 
         frame = cv2.inRange(frame_img, (b_min, g_min, r_min), (b_max, g_max, r_max))
-        #cv2.imshow("Threshold", frame)
 
         (rows, cols, channels) = frame_img.shape
-        #self.get_logger().info(f'Rows, cols: {rows, cols}')
         if cols > 60 and rows > 60:
             keypoints, frame = blob_detect(frame, self._threshold[0], self._threshold[1], 0,
                                         blob_params = self._blob_params, search_window=self.detection_window,
@@ -116,7 +94,6 @@ class Robot_Spinner(Node):
             frame = draw_window(frame, self.detection_window)
             #frame = draw_frame(frame)
             frame = draw_keypoints(frame, keypoints)
-            #self.get_logger().info(f'Keypoints: {keypoints}')
             cv2.imshow("FRAME", frame)
             cv2.waitKey(25)
             
@@ -130,12 +107,7 @@ class Robot_Spinner(Node):
                 
                 self.blob_point.x = x
                 self.blob_point.y = y
-                #publish tocke na temu
-                self.get_logger().info(f'Set x,y to: {self.blob_point.x, self.blob_point.y}')
-                #self.publisher.publish(self.blob_point)
                 break
-        fps = 1.0/(time.time() - self._t0)
-        self._t0 = time.time()
 
         steer_action = K_LAT_DIST_TO_STEER * self.blob_point.x * (-1)
         steer_action = saturate(steer_action, -0.5, 0.5)
@@ -143,28 +115,7 @@ class Robot_Spinner(Node):
         message = Twist()
         message.linear.x = 0.0
         message.angular.z = steer_action
-        #self.get_logger().info(f'Set steer to: {steer_action}')
         self.twistPublisher.publish(message)
-
-        #self.get_logger().info("Hello")
-
-        # r_min = int(self.get_parameter('r_min').value)
-        # g_min = int(self.get_parameter('g_min').value)
-        # b_min = int(self.get_parameter('b_min').value)
-
-        # r_max = int(self.get_parameter('r_max').value)
-        # g_max = int(self.get_parameter('g_max').value)
-        # b_max = int(self.get_parameter('b_max').value)
-
-
-        # frame_threshold = cv2.inRange(frame, (b_min, g_min, r_min), (b_max, g_max, r_max))
-        # cv2.imwrite('camera_image.jpeg', frame)
-        # cv2.imwrite('camera_image_threshold.jpeg', frame_threshold)
-        #self.get_logger().info("Image written")
-
-        #image_msg = CvBridge().cv2_to_imgmsg(frame_threshold, encoding="mono8")
-        #image_msg.header = msg.header
-        #self.publisher.publish(image_msg)
 
 
 def main(args = None):
@@ -182,26 +133,6 @@ def main(args = None):
 
         detection_window = [x_min, y_min, x_max, y_max]
         params = cv2.SimpleBlobDetector_Params()
-        # Change thresholds
-        params.minThreshold = 0;
-        params.maxThreshold = 100;
-        
-        # Filter by Area.
-        params.filterByArea = True
-        params.minArea = 20
-        params.maxArea = 20000
-        
-        # Filter by Circularity
-        params.filterByCircularity = True
-        params.minCircularity = 0.1
-        
-        # Filter by Convexity
-        params.filterByConvexity = True
-        params.minConvexity = 0.2
-        
-        # Filter by Inertia
-        params.filterByInertia = True
-        params.minInertiaRatio = 0.7 
 
         rclpy.init(args = args)
         robotSpinner = Robot_Spinner(blue_min, blue_max, blur, params, detection_window)

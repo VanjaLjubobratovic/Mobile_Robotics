@@ -21,7 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             'robotSpinner = zad32.robotSpinner:main',
-            'chase_ball = zad32.chase_the_ball:main',
         ],
     },
 )

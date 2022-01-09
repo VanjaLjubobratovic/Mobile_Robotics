@@ -37,61 +37,6 @@ def blob_detect(image,                  #-- The frame (cv standard)
     #- Search window
     if search_window is None: search_window = [0.0, 0.0, 1.0, 1.0]
     
-    #- Convert image from BGR to HSV
-    # hsv     = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    
-    # #- Apply HSV threshold
-    # mask    = cv2.inRange(hsv,hsv_min, hsv_max)
-    
-    # #- Show HSV Mask
-    # if imshow:
-    #     cv2.imshow("HSV Mask", mask)
-    
-    # #- dilate makes the in range areas larger
-    # mask = cv2.dilate(mask, None, iterations=2)
-    # #- Show HSV Mask
-    # if imshow:
-    #     cv2.imshow("Dilate Mask", mask)   
-    #     cv2.waitKey(0)
-        
-    # mask = cv2.erode(mask, None, iterations=2)
-    
-    # #- Show dilate/erode mask
-    # if imshow:
-    #     cv2.imshow("Erode Mask", mask)
-    #     cv2.waitKey(0)
-    
-    #- Cut the image using the search mask
-    # mask = apply_search_window(image, search_window)
-    
-    # if imshow:
-    #     cv2.imshow("Searching Mask", mask)
-    #     cv2.waitKey(0)
-
-    #- build default blob detection parameters, if none have been provided
-    # if blob_params is None:
-    #     # Set up the SimpleBlobdetector with default parameters.
-    #     params = cv2.SimpleBlobDetector_Params()
-
-    #     # Filter by Area.
-    #     params.filterByArea = True
-    #     params.minArea = 1
-         
-    #     # Filter by Circularity
-    #     params.filterByCircularity = True
-    #     params.minCircularity = 0.0
-         
-    #     # Filter by Convexity
-    #     params.filterByConvexity = True
-    #     params.minConvexity = 0.0
-         
-    #     # Filter by Inertia
-    #     params.filterByInertia =True
-    #     params.minInertiaRatio = 0.01
-         
-    # else:
-    #     params = blob_params    
-
     # Set up the SimpleBlobdetector with default parameters.
     params = cv2.SimpleBlobDetector_Params()
 
@@ -107,7 +52,6 @@ def blob_detect(image,                  #-- The frame (cv standard)
     detector = cv2.SimpleBlobDetector_create(params)
 
     # Reverse the mask: blobs are black on white
-    #reversemask = 255-mask
     reversemask = 255 - image
     
     if imshow:
