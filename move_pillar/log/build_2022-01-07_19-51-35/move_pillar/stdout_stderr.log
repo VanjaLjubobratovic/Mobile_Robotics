@@ -1,0 +1,41 @@
+running egg_info
+creating ../build/move_pillar/move_pillar.egg-info
+writing ../build/move_pillar/move_pillar.egg-info/PKG-INFO
+writing dependency_links to ../build/move_pillar/move_pillar.egg-info/dependency_links.txt
+writing entry points to ../build/move_pillar/move_pillar.egg-info/entry_points.txt
+writing requirements to ../build/move_pillar/move_pillar.egg-info/requires.txt
+writing top-level names to ../build/move_pillar/move_pillar.egg-info/top_level.txt
+writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+reading manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build
+creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib
+creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+copying move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+copying move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+running install
+running install_lib
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/move_pillar.py to move_pillar.cpython-38.pyc
+byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages
+copying resource/move_pillar -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages
+copying package.xml -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models
+copying models/pillar.sdf -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz
+copying rviz/move_pillar.rviz -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz
+creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch
+copying launch/move_pillar.launch.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch
+running install_egg_info
+Copying ../build/move_pillar/move_pillar.egg-info to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar-1.0.0-py3.8.egg-info
+running install_scripts
+Installing move_pillar script to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/move_pillar
+writing list of installed files to '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log'

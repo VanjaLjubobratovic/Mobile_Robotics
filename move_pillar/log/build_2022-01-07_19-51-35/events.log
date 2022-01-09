@@ -1,0 +1,66 @@
+[0.000000] (-) TimerEvent: {}
+[0.000949] (move_pillar) JobQueued: {'identifier': 'move_pillar', 'dependencies': OrderedDict()}
+[0.001602] (move_pillar) JobStarted: {'identifier': 'move_pillar'}
+[0.099346] (-) TimerEvent: {}
+[0.199977] (-) TimerEvent: {}
+[0.300556] (-) TimerEvent: {}
+[0.400941] (-) TimerEvent: {}
+[0.501476] (-) TimerEvent: {}
+[0.604837] (-) TimerEvent: {}
+[0.615213] (move_pillar) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/move_pillar', 'build', '--build-base', '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build', 'install', '--prefix', '/home/vanja/colcon_ws/src/move_pillar/install/move_pillar', '--record', '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log', '--single-version-externally-managed'], 'cwd': '/home/vanja/colcon_ws/src/move_pillar/move_pillar', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vanja', 'LC_TIME': 'hr_HR.UTF-8', 'SSH_AGENT_PID': '3031', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/vanja', 'OLDPWD': '/home/vanja/colcon_ws/src/move_pillar/move_pillar', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'hr_HR.UTF-8', 'MANAGERPID': '2742', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/vanja/colcon_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'vanja', 'JOURNAL_STREAM': '8:56955', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'vanja', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/home/vanja/turtlebot3_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/vanja/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/vanja-QOSMIO-F750:@/tmp/.ICE-unix/3094,unix/vanja-QOSMIO-F750:/tmp/.ICE-unix/3094', 'INVOCATION_ID': '42154e605ff643a4b813a44115092564', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'hr_HR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6e145b2d_d9d4_4b88_b725_f1dcb1751b3f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'hr_HR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.110', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/vanja/colcon_ws/install/zadaca02:/home/vanja/colcon_ws/install/zadaca01:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'hr_HR.UTF-8', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://localhost:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'hr_HR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'hr_HR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages:/home/vanja/colcon_ws/install/zadaca02/lib/python3.8/site-packages:/home/vanja/colcon_ws/install/zadaca01/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'ROS_HOSTNAME': 'localhost', 'LC_NUMERIC': 'hr_HR.UTF-8', 'LC_PAPER': 'hr_HR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.704990] (-) TimerEvent: {}
+[0.805460] (-) TimerEvent: {}
+[0.905843] (-) TimerEvent: {}
+[1.006176] (-) TimerEvent: {}
+[1.106578] (-) TimerEvent: {}
+[1.207084] (-) TimerEvent: {}
+[1.228716] (move_pillar) StdoutLine: {'line': b'running egg_info\n'}
+[1.229739] (move_pillar) StdoutLine: {'line': b'creating ../build/move_pillar/move_pillar.egg-info\n'}
+[1.230000] (move_pillar) StdoutLine: {'line': b'writing ../build/move_pillar/move_pillar.egg-info/PKG-INFO\n'}
+[1.230388] (move_pillar) StdoutLine: {'line': b'writing dependency_links to ../build/move_pillar/move_pillar.egg-info/dependency_links.txt\n'}
+[1.230655] (move_pillar) StdoutLine: {'line': b'writing entry points to ../build/move_pillar/move_pillar.egg-info/entry_points.txt\n'}
+[1.230922] (move_pillar) StdoutLine: {'line': b'writing requirements to ../build/move_pillar/move_pillar.egg-info/requires.txt\n'}
+[1.231110] (move_pillar) StdoutLine: {'line': b'writing top-level names to ../build/move_pillar/move_pillar.egg-info/top_level.txt\n'}
+[1.272402] (move_pillar) StdoutLine: {'line': b"writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'\n"}
+[1.307187] (-) TimerEvent: {}
+[1.407538] (-) TimerEvent: {}
+[1.456885] (move_pillar) StdoutLine: {'line': b"reading manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'\n"}
+[1.458420] (move_pillar) StdoutLine: {'line': b"writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'\n"}
+[1.458813] (move_pillar) StdoutLine: {'line': b'running build\n'}
+[1.459075] (move_pillar) StdoutLine: {'line': b'running build_py\n'}
+[1.459407] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build\n'}
+[1.459756] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib\n'}
+[1.460028] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar\n'}
+[1.460340] (move_pillar) StdoutLine: {'line': b'copying move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar\n'}
+[1.460564] (move_pillar) StdoutLine: {'line': b'copying move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar\n'}
+[1.460845] (move_pillar) StdoutLine: {'line': b'running install\n'}
+[1.462085] (move_pillar) StdoutLine: {'line': b'running install_lib\n'}
+[1.490792] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar\n'}
+[1.491143] (move_pillar) StdoutLine: {'line': b'copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar\n'}
+[1.491410] (move_pillar) StdoutLine: {'line': b'copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar\n'}
+[1.492110] (move_pillar) StdoutLine: {'line': b'byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/move_pillar.py to move_pillar.cpython-38.pyc\n'}
+[1.495560] (move_pillar) StdoutLine: {'line': b'byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/__init__.py to __init__.cpython-38.pyc\n'}
+[1.496025] (move_pillar) StdoutLine: {'line': b'running install_data\n'}
+[1.497322] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index\n'}
+[1.497844] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index\n'}
+[1.498165] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages\n'}
+[1.498524] (move_pillar) StdoutLine: {'line': b'copying resource/move_pillar -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages\n'}
+[1.498948] (move_pillar) StdoutLine: {'line': b'copying package.xml -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar\n'}
+[1.499244] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models\n'}
+[1.499603] (move_pillar) StdoutLine: {'line': b'copying models/pillar.sdf -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models\n'}
+[1.499854] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz\n'}
+[1.500114] (move_pillar) StdoutLine: {'line': b'copying rviz/move_pillar.rviz -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz\n'}
+[1.500393] (move_pillar) StdoutLine: {'line': b'creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch\n'}
+[1.500656] (move_pillar) StdoutLine: {'line': b'copying launch/move_pillar.launch.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch\n'}
+[1.500948] (move_pillar) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.503932] (move_pillar) StdoutLine: {'line': b'Copying ../build/move_pillar/move_pillar.egg-info to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar-1.0.0-py3.8.egg-info\n'}
+[1.505957] (move_pillar) StdoutLine: {'line': b'running install_scripts\n'}
+[1.507764] (-) TimerEvent: {}
+[1.608167] (-) TimerEvent: {}
+[1.616129] (move_pillar) StdoutLine: {'line': b'Installing move_pillar script to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/move_pillar\n'}
+[1.616762] (move_pillar) StdoutLine: {'line': b"writing list of installed files to '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log'\n"}
+[1.658360] (move_pillar) CommandEnded: {'returncode': 0}
+[1.708341] (-) TimerEvent: {}
+[1.807719] (move_pillar) JobEnded: {'identifier': 'move_pillar', 'rc': 0}
+[1.809906] (-) TimerEvent: {}
+[1.810185] (-) EventReactorShutdown: {}

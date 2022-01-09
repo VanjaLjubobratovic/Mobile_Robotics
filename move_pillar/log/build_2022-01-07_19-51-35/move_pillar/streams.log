@@ -1,0 +1,43 @@
+[0.616s] Invoking command in '/home/vanja/colcon_ws/src/move_pillar/move_pillar': PYTHONPATH=/home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_pillar build --build-base /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build install --prefix /home/vanja/colcon_ws/src/move_pillar/install/move_pillar --record /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log --single-version-externally-managed
+[1.227s] running egg_info
+[1.228s] creating ../build/move_pillar/move_pillar.egg-info
+[1.228s] writing ../build/move_pillar/move_pillar.egg-info/PKG-INFO
+[1.229s] writing dependency_links to ../build/move_pillar/move_pillar.egg-info/dependency_links.txt
+[1.229s] writing entry points to ../build/move_pillar/move_pillar.egg-info/entry_points.txt
+[1.229s] writing requirements to ../build/move_pillar/move_pillar.egg-info/requires.txt
+[1.229s] writing top-level names to ../build/move_pillar/move_pillar.egg-info/top_level.txt
+[1.271s] writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+[1.455s] reading manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+[1.457s] writing manifest file '../build/move_pillar/move_pillar.egg-info/SOURCES.txt'
+[1.457s] running build
+[1.458s] running build_py
+[1.458s] creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build
+[1.458s] creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib
+[1.459s] creating /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+[1.459s] copying move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+[1.459s] copying move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar
+[1.459s] running install
+[1.461s] running install_lib
+[1.489s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+[1.490s] copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/move_pillar.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+[1.490s] copying /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build/lib/move_pillar/__init__.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar
+[1.491s] byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/move_pillar.py to move_pillar.cpython-38.pyc
+[1.494s] byte-compiling /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar/__init__.py to __init__.cpython-38.pyc
+[1.494s] running install_data
+[1.496s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index
+[1.496s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index
+[1.497s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages
+[1.497s] copying resource/move_pillar -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/ament_index/resource_index/packages
+[1.497s] copying package.xml -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar
+[1.498s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models
+[1.498s] copying models/pillar.sdf -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/models
+[1.498s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz
+[1.499s] copying rviz/move_pillar.rviz -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/rviz
+[1.499s] creating /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch
+[1.499s] copying launch/move_pillar.launch.py -> /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/share/move_pillar/launch
+[1.499s] running install_egg_info
+[1.502s] Copying ../build/move_pillar/move_pillar.egg-info to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages/move_pillar-1.0.0-py3.8.egg-info
+[1.504s] running install_scripts
+[1.615s] Installing move_pillar script to /home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/move_pillar
+[1.615s] writing list of installed files to '/home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log'
+[1.657s] Invoked command in '/home/vanja/colcon_ws/src/move_pillar/move_pillar' returned '0': PYTHONPATH=/home/vanja/colcon_ws/src/move_pillar/install/move_pillar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_pillar build --build-base /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/build install --prefix /home/vanja/colcon_ws/src/move_pillar/install/move_pillar --record /home/vanja/colcon_ws/src/move_pillar/build/move_pillar/install.log --single-version-externally-managed
